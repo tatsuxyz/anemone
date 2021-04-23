@@ -1,63 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./img/icon/icon.png" />
-    <title>Anemone</title>
 
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="nav-left">
-        <div class="brand bhe">
-          <i class="far fa-circle"></i> <span>Anemone</span>
-        </div>
-        <div class="search-bar bhe">Tìm kiếm</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./img/icon/icon.png" />
+  <title>Anemone</title>
+
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="sideBar" id="mySideBar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="menu--s">
+        <a href="#">
+          <i class="fas fa-guitar"></i>
+          Thể Loại
+        </a>
+        <a href="#"><i class="fas fa-music"></i>Bài Hát</a>
+        <a href="#"><i class="fas fa-compact-disc"></i>Album</a>
+        <a href="#"><i class="fas fa-user-circle"></i>Nghệ Sĩ</a>
       </div>
-      <div class="nav-right bhe">Xin chào | <i class="far fa-moon"></i></div>
-    </nav>
+    </div>
+    <div class="nav-left">
+      <div id="main">
+        <div class="nav-left__menuIcon" onclick="openNav()">
+          ☰
+        </div>
+      </div>
+      <div class="brand bhe">
+        <i class="far fa-circle"></i> <span>Anemone</span>
+      </div>
+      <div class="search-bar bhe">Tìm kiếm</div>
+    </div>
+    <div class="nav-right bhe">Xin chào | <i class="far fa-moon"></i></div>
+  </nav>
 
-    <!-- chỗ này dùng grid để hiện danh sách nhạc nha -->
-    <div class="browse-container">
-        
+  <!-- chỗ này dùng grid để hiện danh sách nhạc nha -->
+  <div class="browse-container">
+    <div class="title">
+      Anemone Top Music
+    </div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="grid-item_img">
+          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
+        </div>
+        <div class="grid-item_songName">
+          Khóc
+        </div>
+        <div class="grid-item_artist">
+          Son Tung M-TP
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item_img">
+          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
+        </div>
+        <div class="grid-item_songName">
+          Khóc
+        </div>
+        <div class="grid-item_artist">
+          Son Tung M-TP
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item_img">
+          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
+        </div>
+        <div class="grid-item_songName">
+          Khóc
+        </div>
+        <div class="grid-item_artist">
+          Son Tung M-TP
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item_img">
+          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
+        </div>
+        <div class="grid-item_songName">
+          Khóc
+        </div>
+        <div class="grid-item_artist">
+          Son Tung M-TP
+        </div>
+      </div>
+      <div class="grid-item">
+        <div class="grid-item_img">
+          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
+        </div>
+        <div class="grid-item_songName">
+          Khóc
+        </div>
+        <div class="grid-item_artist">
+          Son Tung M-TP
+        </div>
+      </div>
+    </div>
+    <div class="title">
+      Album
+    </div>
+    <div class="grid-container">
+      <div class="grid-item">60</div>
+      <div class="grid-item">70</div>
+      <div class="grid-item">80</div>
+      <div class="grid-item">90</div>
+      <div class="grid-item">10</div>
+    </div>
+  </div>
+
+  <div class="player-dock bhe">
+    <div class="showhide-player">
+      <i class="fas fa-caret-up"></i>
     </div>
 
-    <div class="player-dock bhe">
-      <div class="showhide-player">
-        <i class="fas fa-caret-up"></i>
+    <div class="track-meta">
+      <div class="small-albumcover">
+        <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="" />
       </div>
-
-      <div class="track-meta">
-        <div class="small-albumcover">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="" />
-        </div>
-        <div class="meta-info">
-          <div class="track-title">Creation</div>
-          <div class="artist-name">Yorushika</div>
-        </div>
+      <div class="meta-info">
+        <div class="track-title">Creation</div>
+        <div class="artist-name">Yorushika</div>
       </div>
-
-      <div class="control-playback">
-          <div class="previous"><i class="fas fa-backward"></i></div>
-          <div class="play-pause"><i class="fas fa-play"></i></div>
-          <div class="next"><i class="fas fa-forward"></i></div>
-      </div>
-
-      <div class="progress-bar"></div>
-
-      <div class="control-volume"><i class="fas fa-volume-up"></i></div>
-
-      <div class="option-menu"><i class="fas fa-ellipsis-v"></i></div>
     </div>
-  </body>
+
+    <div class="control-playback">
+      <div class="previous"><i class="fas fa-backward"></i></div>
+      <div class="play-pause"><i class="fas fa-play"></i></div>
+      <div class="next"><i class="fas fa-forward"></i></div>
+    </div>
+
+    <div class="progress-bar"></div>
+
+    <div class="control-volume"><i class="fas fa-volume-up"></i></div>
+
+    <div class="option-menu"><i class="fas fa-ellipsis-v"></i></div>
+  </div>
+  <script src="./src/index.js"></script>
+</body>
+
 </html>
