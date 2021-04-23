@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  top: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #1c1c1c;
+  user-select: none;
+  color: #fcfaf2;
+}
+
+/* Top Navigation */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.nav-left div {
+  margin: 5px;
+}
+
+.brand {
+  background-color: #113285;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+
+.brand i,
+.brand span {
+  padding: 0 5px;
+}
+
+.search-bar {
+  background-color: #434343;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 180px;
+}
+
+.nav-right {
+  background-color: #113285;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+/* Music Player Dock */
+.player-dock {
+  display: flex;
+  position: fixed;
+  background-color: #113285;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0 20px;
+  top: 88%;
+  left: 10%;
+  height: 60px;
+  width: 80%;
+}
+
+.showhide-player i {
+  vertical-align: middle;
+  padding: 20px 5px;
+}
+
+.track-meta {
+  margin: 6px 10px;
+  display: flex;
+}
+
+.small-albumcover img {
+  border-radius: 5px;
+  height: 45px;
+}
+
+.meta-info {
+  margin: 5px;
+}
+
+.meta-info div {
+  margin: 0px 6px;
+}
+
+/* .meta-info .track-title {
+
+} */
+
+.meta-info .artist-name {
+    font-size: 11px;
+    color: #91989f;
+}
+
+.control-playback {
+    padding: 16px;
+    display: flex;
+}
+
+.control-playback div i {
+    padding: 0 14px;
+    font-size: 24px;
+}
+
+.control-volume {
+    padding: 16px 14px;
+    font-size: 18px;    
+}
+
+.option-menu {
+    padding: 18px 14px;
+    font-size: 14px;    
+}
+
+/* bhe - box's hover effect */
+.bhe {
+  transition: 0.5s;
+}
+
+.bhe:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bhe:active {
+  transform: scale(0.9);
+}
