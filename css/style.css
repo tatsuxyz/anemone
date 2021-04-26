@@ -216,6 +216,16 @@ nav {
   font-size: 14px;
 }
 
+/* audio player */
+.audio-bar {
+  width: 80%;
+}
+
+#audio-player {
+  width: 100%;
+  height: 80%;
+}
+
 /* bhe - box's hover effect */
 
 .bhe {
