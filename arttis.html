@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css" />
   <link rel="stylesheet" href="./css/white.css">
+  <link rel="stylesheet" href="./css/album.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
         </div>
       </div>
       <div class="brand bhe">
-        <i class="far fa-circle"></i> <span>Anemone</span>
+        <a href="index.html"><i class="far fa-circle"></i> <span>Anemone</span></a> 
       </div>
       <div class="search-bar bhe">
         <input type="text" placeholder="Search"><i class="fas fa-search"></i></div>
@@ -45,12 +46,34 @@
 
   <div class="browse-container">
     <div class="title">
-      Top Music
+      Nghệ sĩ
     </div>
     <div class="grid-container">
       <div class="grid-item bhe" style="cursor: pointer;">
         <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
+         <a href="./arttis-small.html"><img src="./img/metacover/yorushika/creatation/440x440.jpg" alt=""></a> 
+        </div>
+        <div class="grid-item_songName">
+            Title
+          </div>
+        <div class="grid-item_artist">
+          Artist
+        </div>
+      </div>
+      <div class="grid-item bhe">
+        <div class="grid-item_img">
+            <a href="./arttis-small.html"><img src="./img/metacover/yorushika/creatation/440x440.jpg" alt=""></a>
+        </div>
+        <div class="grid-item_songName">
+            Title
+          </div>
+        <div class="grid-item_artist">
+          Artist
+        </div>
+      </div>
+      <div class="grid-item bhe">
+        <div class="grid-item_img">
+            <a href="./arttis-small.html"><img src="./img/metacover/yorushika/creatation/440x440.jpg" alt=""></a>
         </div>
         <div class="grid-item_songName">
           Title
@@ -81,31 +104,6 @@
           Artist
         </div>
       </div>
-      <div class="grid-item bhe">
-        <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
-        </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
-        <div class="grid-item_artist">
-          Artist
-        </div>
-      </div>
-      <div class="grid-item bhe">
-        <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
-        </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
-        <div class="grid-item_artist">
-          Artist
-        </div>
-      </div>
-    </div>
-    <div class="title">
-      Album
     </div>
     <div class="grid-container">
       <div class="grid-item bhe">
@@ -202,11 +200,12 @@
 
   <!-- script file -->
   <script src="./src/index.js"></script>
-  <!-- <script src="https://cdn.plyr.io/3.6.7/demo.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.plyr.io/3.6.7/demo.js" crossorigin="anonymous"></script>
   <script
     src="https://cdn.plyr.io/3.6.7/demo.js"
     crossorigin="anonymous">
-  </script> -->
+  </script>
+  <script src="./src/dataArtis.js"></script>
 </body>
 
 </html>

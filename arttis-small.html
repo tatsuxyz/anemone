@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css" />
   <link rel="stylesheet" href="./css/white.css">
+  <link rel="stylesheet" href="./css/album.css">
+  <link rel="stylesheet" href="./css/arttis-small.css">
 </head>
 
 <body>
@@ -34,10 +36,10 @@
         </div>
       </div>
       <div class="brand bhe">
-        <i class="far fa-circle"></i> <span>Anemone</span>
+        <a href="index.html"><i class="far fa-circle"></i> <span>Anemone</span></a> 
       </div>
       <div class="search-bar bhe">
-        <input type="text" placeholder="Search"><i class="fas fa-search"></i></div>
+        <input type="text" placeholder="Search"><i class="fas fa-search"></i>
       </div>
     </div>
     <div class="nav-right bhe">Xin chào | <i class="far fa-moon"></i></div>
@@ -45,67 +47,21 @@
 
   <div class="browse-container">
     <div class="title">
-      Top Music
+      Nghệ sĩ
     </div>
-    <div class="grid-container">
-      <div class="grid-item bhe" style="cursor: pointer;">
-        <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
+    <div class="arttis--content">
+        <div class="arttis--img">
+            <img src="./img/metacover/yorushika/creatation/st-15973999489741584015103.jpg" alt="" onclick="getData()">
         </div>
-        <div class="grid-item_songName">
-          Title
+        <div class="arrttis--infor">
+            <p id="infor">Họ tên:</p>
+            <p id="infor">Sinh nhật:</p>
+            <p id="infor">Nghệ danh:</p>
+            <p id="infor"></p>
         </div>
-        <div class="grid-item_artist">
-          Artist
-        </div>
-      </div>
-      <div class="grid-item bhe">
-        <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
-        </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
-        <div class="grid-item_artist">
-          Artist
-        </div>
-      </div>
-      <div class="grid-item bhe">
-        <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
-        </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
-        <div class="grid-item_artist">
-          Artist
-        </div>
-      </div>
-      <div class="grid-item bhe">
-        <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
-        </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
-        <div class="grid-item_artist">
-          Artist
-        </div>
-      </div>
-      <div class="grid-item bhe">
-        <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
-        </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
-        <div class="grid-item_artist">
-          Artist
-        </div>
-      </div>
     </div>
     <div class="title">
-      Album
+        Những bài hát hay nhất
     </div>
     <div class="grid-container">
       <div class="grid-item bhe">
@@ -202,11 +158,12 @@
 
   <!-- script file -->
   <script src="./src/index.js"></script>
-  <!-- <script src="https://cdn.plyr.io/3.6.7/demo.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.plyr.io/3.6.7/demo.js" crossorigin="anonymous"></script>
   <script
     src="https://cdn.plyr.io/3.6.7/demo.js"
     crossorigin="anonymous">
-  </script> -->
+  </script>
+  <script src="./src/dataArtis.js"></script>
 </body>
 
 </html>
