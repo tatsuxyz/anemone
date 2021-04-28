@@ -128,9 +128,13 @@ nav {
 
 /* body */
 
-.title {
+.header-title {
   font-size: 24px;
-  margin-left: 330px;
+  text-align: center;
+}
+
+.bottom-list-bar {
+  margin: 20px 0;
 }
 
 .grid-item_songName {
@@ -145,8 +149,8 @@ nav {
   padding: 10px 0px;
   width: 100%;
   justify-content: center;
-  grid-column-gap: 80px;
-  grid-row-gap: 100px;
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
 }
 
 .grid-item {
@@ -154,9 +158,8 @@ nav {
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 16px;
-  width: 150px;
+  width: 200px;
   border-radius: 7px;
-  /* text-align: center; */
   cursor: pointer;
 }
 
