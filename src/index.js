@@ -20,8 +20,8 @@ function closeNav() {
 }
 
 // Default track of songs
-let songIndex = songs.length - 1;
-let artistIndex = artists.length - 1;
+let songIndex = 1;
+let artistIndex = 1;
 
 // Initially load song info DOM
 loadSong(songs[songIndex]);
@@ -81,6 +81,12 @@ function nextSong() {
 
   loadSong(songs[songIndex]);
   loadArtist(artists[artistIndex]);
+  playSong();
+}
+
+// Pick song
+function pickSong(songIndex) {
+  loadSong(songs[songIndex]);
   playSong();
 }
 
