@@ -5,9 +5,15 @@ const nextBtn = document.querySelector("#next");
 const audio = document.querySelector("#audio");
 const progress = document.querySelector(".progress");
 const progressContainer = document.querySelector(".progress-container");
+const volumeContainer = document.querySelector(".volume-maxsize");
+const volumeSize = document.querySelector(".volume-size");
 const title = document.querySelector("#title");
 const artistTitle = document.querySelector("#artist");
 const cover = document.querySelector("#cover");
+
+function gotoHome() {
+  window.open("/", "_self");
+}
 
 function openNav() {
   document.getElementById("mySideBar").style.width = "250px";
@@ -105,6 +111,19 @@ function setProgress(e) {
   audio.currentTime = (clickX / width) * duration;
 }
 
+// Audio Volume
+function setVolume(e) {
+  let currentVol;
+  const width = this.clientWidth;
+  const clickX = e.offsetX;
+
+  currentVol = audio.volume;
+  let volVal = currentVol;
+  const volPercent = volVal * 100;
+  audio.volume = (clickX / width) * currentVol;
+  volumeSize.style.width = `${volPercent}%`;
+}
+
 // Event Listeners
 playBtn.addEventListener("click", () => {
   const isPlaying = musicContainer.classList.contains("play");
@@ -121,4 +140,5 @@ prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
 audio.addEventListener("timeupdate", updateProgress);
 progressContainer.addEventListener("click", setProgress);
+volumeContainer.addEventListener("click", setVolume);
 audio.addEventListener("ended", nextSong);
