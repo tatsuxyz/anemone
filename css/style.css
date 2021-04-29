@@ -189,7 +189,7 @@ nav {
 }
 
 .track-meta {
-  margin: 6px 10px;
+  margin: 6px 0px;
   display: flex;
 }
 
@@ -223,6 +223,26 @@ nav {
   justify-content: center;
   z-index: 1;
 }
+
+.control-playback #next {
+  margin-right: 25px;
+}
+
+/* playback option */
+.playback-opt {
+  display: flex;
+  padding: 20px 5px;
+}
+
+.playback-opt i {
+  margin: 0 15px;
+}
+
+.playback-opt i.fa-random {
+  font-size: 18px;
+}
+
+
 
 .control-playback i {
   padding: 0 14px;
