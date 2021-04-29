@@ -112,15 +112,16 @@ function setProgress(e) {
 }
 
 // Audio Volume
+audio.volume = 0.7;
+volumeSize.style.width = "70%";
 function setVolume(e) {
-  let currentVol;
+  let currentVol = audio.volume;
   const width = this.clientWidth;
   const clickX = e.offsetX;
 
-  currentVol = audio.volume;
-  let volVal = currentVol;
-  const volPercent = volVal * 100;
-  audio.volume = (clickX / width) * currentVol;
+  currentVol = (clickX / width) * 1.0;
+  audio.volume = currentVol;
+  const volPercent = (currentVol / 1.0) * 100;
   volumeSize.style.width = `${volPercent}%`;
 }
 
