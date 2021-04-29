@@ -7,6 +7,7 @@ const progress = document.querySelector(".progress");
 const progressContainer = document.querySelector(".progress-container");
 const volumeContainer = document.querySelector(".volume-maxsize");
 const volumeSize = document.querySelector(".volume-size");
+const volIcon = document.querySelector("#volume");
 const title = document.querySelector("#title");
 const artistTitle = document.querySelector("#artist");
 const cover = document.querySelector("#cover");
@@ -112,16 +113,34 @@ function setProgress(e) {
 }
 
 // Audio Volume
+audio.volume = 0.7;
+volumeSize.style.width = "70%";
+
+function volDown() {
+  volIcon.querySelector("i.fas").classList.remove("fa-volume-up");
+  volIcon.querySelector("i.fas").classList.add("fa-volume-down");
+}
+
+function volUp() {
+  volIcon.querySelector("i.fas").classList.add("fa-volume-up");
+  volIcon.querySelector("i.fas").classList.remove("fa-volume-down");
+}
+
 function setVolume(e) {
-  let currentVol;
+  let currentVol = audio.volume;
   const width = this.clientWidth;
   const clickX = e.offsetX;
 
-  currentVol = audio.volume;
-  let volVal = currentVol;
-  const volPercent = volVal * 100;
-  audio.volume = (clickX / width) * currentVol;
+  currentVol = (clickX / width) * 1.0;
+  audio.volume = currentVol;
+  const volPercent = (currentVol / 1.0) * 100;
   volumeSize.style.width = `${volPercent}%`;
+
+  if (currentVol <= 0.6) {
+    volDown();
+  } else {
+    volUp();
+  }
 }
 
 // Event Listeners
