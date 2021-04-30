@@ -91,6 +91,7 @@ nav {
 }
 
 .brand {
+  cursor: pointer;
   background-color: #113285;
   border-radius: 5px;
   padding: 10px 10px;
