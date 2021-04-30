@@ -92,8 +92,9 @@ function nextSong() {
 }
 
 // Pick song
-function pickSong(songIndex) {
-  loadSong(songs[songIndex]);
+function pickSong(Index) {
+  loadSong(songs[Index]);
+  loadArtist(artists[Index]);
   playSong();
 }
 
