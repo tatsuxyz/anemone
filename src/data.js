@@ -19,4 +19,7 @@ const artists = [
   "Yorushika",
   "Toko Miura",
   "yourness",
+  "BUMP OF CHICKEN",
+  "Mili",
+  "mol-74",
 ];
