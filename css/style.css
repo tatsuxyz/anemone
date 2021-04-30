@@ -38,7 +38,7 @@ nav {
   padding: 20px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: whitesmoke;
+  color: #fcfaf2;
   display: block;
   transition: 0.3s;
 }
@@ -62,7 +62,7 @@ nav {
 .nav-left__menuIcon {
   font-size: 30px;
   cursor: pointer;
-  color: white;
+  color: #fcfaf2;
   padding: 10px 15px;
   border: none;
 }
@@ -111,10 +111,10 @@ nav {
 
 .search-bar input {
   outline: none;
-  color: white;
+  color: #fcfaf2;
   padding: 10px;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #1c1c1c
 }
 
 .search-bar i {
@@ -156,7 +156,7 @@ nav {
 
 .grid-item {
   background-color: #434343;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border: none;
   padding: 20px;
   font-size: 16px;
   width: 200px;
@@ -273,7 +273,7 @@ nav {
 
 .meta-info .artist-name {
   font-size: 11px;
-  color: #91989f;
+  color: #fcfaf2;
 }
 
 /* volume container */

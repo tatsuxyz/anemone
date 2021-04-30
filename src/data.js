@@ -1,15 +1,22 @@
 const songs = [
-    "Robber and Bouquet",
-    "Spring Thief",
-    "Creation",
-    "Eat the Wind",
-    "Liar",
-  ];
-  
-  const artists = [
-    "Yorushika",
-    "Yorushika",
-    "Yorushika",
-    "Yorushika",
-    "Yorushika",
-  ];
+  "Robber and Bouquet",
+  "Spring Thief",
+  "Creation",
+  "Eat the Wind",
+  "Liar",
+  "FISHANDCHIPS",
+  "Shion",
+  "Gravity",
+  "Ikutoshitsuki",
+  "Alkalemia",
+];
+
+const artists = [
+  "Yorushika",
+  "Yorushika",
+  "Yorushika",
+  "Yorushika",
+  "Yorushika",
+  "Toko Miura",
+  "yourness",
+];
