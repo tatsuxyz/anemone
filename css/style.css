@@ -347,3 +347,7 @@ nav {
 .bhe:active {
   transform: scale(0.9);
 }
+
+.black-gap {
+  height: 80px;
+}
