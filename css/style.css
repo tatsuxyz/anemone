@@ -321,6 +321,7 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   margin: 28px 0;
+  margin-right: 60px;
   height: 4px;
   width: 100%;
 }
