@@ -6,10 +6,16 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #1c1c1c;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   user-select: none;
   color: #fcfaf2;
   margin: 0;
+  
+}
+
+::-webkit-scrollbar { 
+  display: none; 
 }
 
 /* Top Navigation */
@@ -178,7 +184,7 @@ nav {
   border-radius: 10px;
   padding: 0 20px;
   top: 88%;
-  left: 10%;
+  left: 11%;
   height: 60px;
   width: 80%;
 }

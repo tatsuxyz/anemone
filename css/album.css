@@ -1,9 +1,16 @@
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
 .brand a {
     text-decoration: none;
     cursor: pointer;
     color: white;
 }
-/* 
-body{
-    background-image: url("https://www.triplejunearthed.com/sites/default/files/artists/public/2/4/5/8/8/1//ec3a462e-6590-42fc-bb8d-e1dc10a8cd77.png") no-repeat;
-} */
+
+.head-title {
+    text-align: center;
+    font-size: 24px;
+    padding: 30px 0px 20px 0px;
+}

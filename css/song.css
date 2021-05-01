@@ -1,0 +1,20 @@
+body {
+    height: 1000px;
+    background-image: url("https://effectiviology.com/wp-content/uploads/The-Benefits-of-Music-and-Background-Noise.jpg") no-repeat;
+    
+} 
+
+.header-title{
+    padding: 30px 0px 20px 0px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto ;
+    padding: 10px 0px 0px 80px;
+    width: 100%;
+    justify-content: center;
+    grid-column-gap: 25px;
+    grid-row-gap: 30px;
+}
+

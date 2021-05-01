@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css" />
   <link rel="stylesheet" href="./css/white.css">
   <link rel="stylesheet" href="./css/album.css">
+  <link rel="stylesheet" href="./css/arttis-small.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <div class="menu--s">
         <a href="#"><i class="fas fa-guitar"></i>Thể Loại</a>
-        <a href="#"><i class="fas fa-music"></i>Bài Hát</a>
+        <a href="song.html"><i class="fas fa-music"></i>Bài Hát</a>
         <a href="album.html"><i class="fas fa-compact-disc"></i>Album</a>
         <a href="arttis.html"><i class="fas fa-user-circle"></i>Nghệ Sĩ</a>
       </div>
@@ -35,11 +36,12 @@
         </div>
       </div>
       <div class="brand bhe">
-        <a href="index.html"><i class="far fa-circle"></i> <span>Anemone</span></a> 
+        <a href="index.html"><i class="far fa-circle"></i> <span>Anemone</span></a>
       </div>
       <div class="search-bar bhe">
-        <input type="text" placeholder="Search"><i class="fas fa-search"></i></div>
+        <input type="text" placeholder="Search"><i class="fas fa-search"></i>
       </div>
+    </div>
     </div>
     <div class="nav-right bhe">Xin chào | <i class="far fa-moon"></i></div>
   </nav>
@@ -48,35 +50,113 @@
     <div class="title">
       Nghệ sĩ
     </div>
+    <div id="id01" class="modal">
+      <form class="modal--content aimate" action="/action_page.php" method="post">
+        <div class="content">
+          <div class="img-content">
+            <span onclick="closeInfor()" class="close" title="Close Modal">&times;</span>
+            <img src="https://event.mediacdn.vn/2020/8/14/st-15973999489741584015103.jpg" alt="avatar" class="avatar" id="avt">
+          </div>
+          <div class="infor-content">
+            <p id="name"></p>
+            <p id="stageName"></p>
+            <p id="dob"></p>
+            <p id="infor"></p>
+          </div>
+        </div>
+        <div class="title" style="color: black;">
+          Những bài hát hay nhất 
+        </div>
+        <div class="grid-container">
+          <div class="grid-item bhe">
+            <div class="grid-item_img">
+              <img src="./img/Robber and Bouquet.jpg" alt="">
+            </div>
+            <div class="grid-item_songName">
+              Title
+            </div>
+            <div class="grid-item_artist">
+              Artist
+            </div>
+          </div>
+          <div class="grid-item bhe">
+            <div class="grid-item_img">
+              <a href="./arttis-small.html"><img src="./img/Robber and Bouquet.jpg" alt=""></a>
+            </div>
+            <div class="grid-item_songName">
+              Title
+            </div>
+            <div class="grid-item_artist">
+              Artist
+            </div>
+          </div>
+          <div class="grid-item bhe">
+            <div class="grid-item_img">
+              <a href="./arttis-small.html"><img src="./img/Robber and Bouquet.jpg" alt=""></a>
+            </div>
+            <div class="grid-item_songName">
+              Title
+            </div>
+            <div class="grid-item_artist">
+              Artist
+            </div>
+          </div>
+          <div class="grid-item bhe">
+            <div class="grid-item_img">
+              <a href="./arttis-small.html"><img src="./img/Robber and Bouquet.jpg" alt=""></a>
+            </div>
+            <div class="grid-item_songName">
+              Title
+            </div>
+            <div class="grid-item_artist">
+              Artist
+            </div>
+          </div>
+          <div class="grid-item bhe">
+            <div class="grid-item_img">
+              <a href="./arttis-small.html"><img src="./img/Robber and Bouquet.jpg" alt=""></a>
+            </div>
+            <div class="grid-item_songName">
+              Title
+            </div>
+            <div class="grid-item_artist">
+              Artist
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <button onclick="closeInfor()" type="button" class="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
     <div class="grid-container">
       <div class="grid-item bhe" style="cursor: pointer;">
         <div class="grid-item_img">
-         <a href="./arttis-small.html"><img src="./img/metacover/yorushika/creatation/440x440.jpg" alt=""></a> 
+          <img src="https://event.mediacdn.vn/2020/8/14/st-15973999489741584015103.jpg" alt="" onclick="showInfor(0)" />
         </div>
-        <div class="grid-item_songName">
-            Title
-          </div>
         <div class="grid-item_artist">
-          Artist
+          Sơn Tùng M-TP
         </div>
       </div>
       <div class="grid-item bhe">
         <div class="grid-item_img">
-            <a href="./arttis-small.html"><img src="./img/metacover/yorushika/creatation/440x440.jpg" alt=""></a>
+          <img src="https://kenh14cdn.com/2020/9/9/photo-1-15995806970981364895494-15996249342891876143446.jpg" alt="" onclick="showInfor(1)">
         </div>
-        <div class="grid-item_songName">
-            Title
-          </div>
         <div class="grid-item_artist">
-          Artist
+          Mr. Siro
         </div>
       </div>
       <div class="grid-item bhe">
         <div class="grid-item_img">
-            <a href="./arttis-small.html"><img src="./img/metacover/yorushika/creatation/440x440.jpg" alt=""></a>
+          <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2020/06/29/0/9/e/a/1593412376912_600.jpg" alt="" onclick="showInfor(2)">
         </div>
-        <div class="grid-item_songName">
-          Title
+        <div class="grid-item_artist">
+          Karik
+        </div>
+      </div>
+      <div class="grid-item bhe">
+        <div class="grid-item_img">
+          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
         </div>
         <div class="grid-item_artist">
           Artist
@@ -85,20 +165,6 @@
       <div class="grid-item bhe">
         <div class="grid-item_img">
           <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
-        </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
-        <div class="grid-item_artist">
-          Artist
-        </div>
-      </div>
-      <div class="grid-item bhe">
-        <div class="grid-item_img">
-          <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
-        </div>
-        <div class="grid-item_songName">
-          Title
         </div>
         <div class="grid-item_artist">
           Artist
@@ -110,9 +176,6 @@
         <div class="grid-item_img">
           <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
         </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
         <div class="grid-item_artist">
           Artist
         </div>
@@ -121,9 +184,7 @@
         <div class="grid-item_img">
           <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
         </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
+       
         <div class="grid-item_artist">
           Artist
         </div>
@@ -132,9 +193,7 @@
         <div class="grid-item_img">
           <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
         </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
+        
         <div class="grid-item_artist">
           Artist
         </div>
@@ -143,9 +202,7 @@
         <div class="grid-item_img">
           <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
         </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
+        
         <div class="grid-item_artist">
           Artist
         </div>
@@ -154,15 +211,13 @@
         <div class="grid-item_img">
           <img src="./img/metacover/yorushika/creatation/440x440.jpg" alt="">
         </div>
-        <div class="grid-item_songName">
-          Title
-        </div>
+       
         <div class="grid-item_artist">
           Artist
         </div>
       </div>
     </div>
-    </div>
+  </div>
   </div>
 
   <div class="player-dock">
@@ -189,7 +244,8 @@
 
     <div class="audio-bar">
       <audio id="audio-player" controls>
-        <source src="./music/creation.mp3" type="audio/mpeg"><source>
+        <source src="./music/creation.mp3" type="audio/mpeg">
+        <source>
       </audio>
     </div>
 
@@ -200,10 +256,9 @@
 
   <!-- script file -->
   <script src="./src/index.js"></script>
+  <script src="./src/data.js"></script>
   <script src="https://cdn.plyr.io/3.6.7/demo.js" crossorigin="anonymous"></script>
-  <script
-    src="https://cdn.plyr.io/3.6.7/demo.js"
-    crossorigin="anonymous">
+  <script src="https://cdn.plyr.io/3.6.7/demo.js" crossorigin="anonymous">
   </script>
   <script src="./src/dataArtis.js"></script>
 </body>
