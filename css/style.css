@@ -21,55 +21,12 @@ nav {
   padding: 20px 10px;
 }
 
-.sideBar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  /* background-color: #434343; */
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sideBar a {
-  padding: 20px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #fcfaf2;
-  display: block;
-  transition: 0.3s;
-}
-
-.sideBar i {
-  padding-right: 20px;
-}
-
-.sideBar a:hover {
-  color: #eb7a77;
-}
-
-.sideBar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
 .nav-left__menuIcon {
   font-size: 30px;
   cursor: pointer;
   color: #fcfaf2;
   padding: 10px 15px;
   border: none;
-}
-
-#main {
-  transition: margin-left 0.5s;
-  padding: 16px;
 }
 
 @media screen and (max-height: 450px) {
@@ -352,3 +309,5 @@ nav {
 .black-gap {
   height: 80px;
 }
+
+/* Reponsive UI */

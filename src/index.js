@@ -77,7 +77,8 @@ function prevSong() {
   playSong();
 }
 
-function nextSong() {
+function nextSong(Index) {
+  songs = songs[Index];
   songIndex++;
   artistIndex++;
 
