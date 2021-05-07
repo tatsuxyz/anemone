@@ -83,7 +83,7 @@ function prevSong() {
   loadArtist(artists[artistIndex]);
   playSong();
 }
-function nextSong(Index) {
+function nextSong() {
   songIndex++;
   artistIndex++;
 
@@ -101,6 +101,7 @@ function nextSong(Index) {
 function pickSong(Index) {
   loadSong(songs[Index]);
   loadArtist(artists[Index]);
+  songIndex = Index;
   playSong();
 }
 
