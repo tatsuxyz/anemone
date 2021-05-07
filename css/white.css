@@ -1,29 +1,32 @@
+/* Body */
 body.dark {
   background-color: #1c1c1c;
   transition: 0.5s;
 }
-
 body.white {
   background-color: #fcfaf2;
   transition: 0.5s;
 }
 
+/* Top */
 body.white .header-title {
-  color: #1c1c1c;
+  color: #434343;
+}
+body.white .search-bar {
+  background-color: #fffffb;
+}
+body.white .search-bar input,
+body.white .search-bar i {
+  color: #434343;
 }
 
-body.white .bhe {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+/* Grid */
+body.white .grid-item {
+  background-color: #fffffb;
+  color: #434343;
 }
 
-body.white .bhe:hover {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
-body.white .bhe:active {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);  
-}
-
+/* Bottom */
 body.white .player-dock {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
