@@ -134,6 +134,7 @@ nav {
   background-color: #005caf;
   justify-content: space-between;
   border-radius: 10px;
+  transition: 0.5s;
   padding: 0 20px;
   top: 90%;
   left: 10%;
