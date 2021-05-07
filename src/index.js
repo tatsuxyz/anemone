@@ -24,6 +24,10 @@ const title = document.querySelector("#title");
 const artistTitle = document.querySelector("#artist");
 const cover = document.querySelector("#cover");
 
+// white/dark icon
+const wdIcon = document.querySelector("#whitemode");
+const body = document.querySelector("body");
+
 // Homepage buttom
 function gotoHome() {
   window.open("/", "_self");
@@ -163,20 +167,25 @@ volumeContainer.addEventListener("click", setVolume);
 audio.addEventListener("ended", nextSong);
 
 // white mode
-const body = document.querySelector("body");
-const darkbtn = document.querySelector("#whitemode");
 
 if (localStorage.getItem("whiteStatus")) {
+  wdIcon.querySelector("i.far").classList.remove("fa-moon");
+  wdIcon.querySelector("i.far").classList.add("fa-sun");
   body.classList.remove("dark");
   body.classList.add("white");
 }
 
-darkbtn.addEventListener("click", function () {
+wdIcon.addEventListener("click", function () {
   if (localStorage.getItem("whiteStatus")) {
+    wdIcon.querySelector("i.far").classList.remove("fa-sun");
+    wdIcon.querySelector("i.far").classList.add("fa-moon");
     body.classList.remove("white");
     body.classList.add("dark");
     localStorage.removeItem("whiteStatus");
   } else {
+    // wdIcon.querySelector("i.fas").classList.remove("fa-moon");
+    wdIcon.querySelector("i.far").classList.remove("fa-moon");
+    wdIcon.querySelector("i.far").classList.add("fa-sun");
     body.classList.remove("dark");
     body.classList.add("white");
     localStorage.setItem("whiteStatus", "true");
