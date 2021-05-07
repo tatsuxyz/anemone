@@ -102,6 +102,7 @@ function pickSong(Index) {
   loadSong(songs[Index]);
   loadArtist(artists[Index]);
   songIndex = Index;
+  artistIndex = Index;
   playSong();
 }
 

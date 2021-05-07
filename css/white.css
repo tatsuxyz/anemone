@@ -9,9 +9,6 @@ body.white {
 }
 
 /* Top */
-body.white .header-title {
-  color: #434343;
-}
 body.white .search-bar {
   background-color: #fffffb;
 }
@@ -21,6 +18,9 @@ body.white .search-bar i {
 }
 
 /* Grid */
+body.white .header-title {
+  color: #434343;
+}
 body.white .grid-item {
   background-color: #fffffb;
   color: #434343;
