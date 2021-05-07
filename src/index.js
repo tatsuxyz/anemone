@@ -1,31 +1,36 @@
+/* ----------- Area for Declare Variable ------------- */
+// music-player
 const musicContainer = document.querySelector(".player-dock");
+
+// control button
 const playBtn = document.querySelector("#play");
 const prevBtn = document.querySelector("#prev");
 const nextBtn = document.querySelector("#next");
+
+// audio element
 const audio = document.querySelector("#audio");
+
+// progress element
 const progress = document.querySelector(".progress");
 const progressContainer = document.querySelector(".progress-container");
+
+// volume element
 const volumeContainer = document.querySelector(".volume-maxsize");
 const volumeSize = document.querySelector(".volume-size");
 const volIcon = document.querySelector("#volume");
+
+// metadata
 const title = document.querySelector("#title");
 const artistTitle = document.querySelector("#artist");
 const cover = document.querySelector("#cover");
 
+// Homepage buttom
 function gotoHome() {
   window.open("/", "_self");
 }
 
-function openNav() {
-  document.getElementById("mySideBar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySideBar").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-}
-
+/* --------------------- INDEX SCRIPT ------------------------- */
+/* -------- Functions for Music Player --------- */
 // Default track of songs
 let songIndex = 1;
 let artistIndex = 1;
@@ -40,7 +45,6 @@ function loadSong(song) {
   audio.src = `./music/${song}.mp3`;
   cover.src = `./img/${song}.jpg`;
 }
-
 function loadArtist(artist) {
   artistTitle.innerText = artist;
 }
@@ -53,7 +57,6 @@ function playSong() {
 
   audio.play();
 }
-
 function pauseSong() {
   musicContainer.classList.remove("play");
   playBtn.querySelector("i.fas").classList.add("fa-play");
@@ -76,7 +79,6 @@ function prevSong() {
   loadArtist(artists[artistIndex]);
   playSong();
 }
-
 function nextSong(Index) {
   songs = songs[Index];
   songIndex++;
@@ -105,7 +107,6 @@ function updateProgress(e) {
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
 }
-
 function setProgress(e) {
   const width = this.clientWidth;
   const clickX = e.offsetX;
@@ -117,17 +118,14 @@ function setProgress(e) {
 // Audio Volume
 audio.volume = 0.7;
 volumeSize.style.width = "70%";
-
 function volDown() {
   volIcon.querySelector("i.fas").classList.remove("fa-volume-up");
   volIcon.querySelector("i.fas").classList.add("fa-volume-down");
 }
-
 function volUp() {
   volIcon.querySelector("i.fas").classList.add("fa-volume-up");
   volIcon.querySelector("i.fas").classList.remove("fa-volume-down");
 }
-
 function setVolume(e) {
   let currentVol = audio.volume;
   const width = this.clientWidth;
@@ -145,7 +143,7 @@ function setVolume(e) {
   }
 }
 
-// Event Listeners
+// Player's Event Listeners
 playBtn.addEventListener("click", () => {
   const isPlaying = musicContainer.classList.contains("play");
 
@@ -163,3 +161,24 @@ audio.addEventListener("timeupdate", updateProgress);
 progressContainer.addEventListener("click", setProgress);
 volumeContainer.addEventListener("click", setVolume);
 audio.addEventListener("ended", nextSong);
+
+// white mode
+const body = document.querySelector("body");
+const darkbtn = document.querySelector("#whitemode");
+
+if (localStorage.getItem("whiteStatus")) {
+  body.classList.remove("dark");
+  body.classList.add("white");
+}
+
+darkbtn.addEventListener("click", function () {
+  if (localStorage.getItem("whiteStatus")) {
+    body.classList.remove("white");
+    body.classList.add("dark");
+    localStorage.removeItem("whiteStatus");
+  } else {
+    body.classList.remove("dark");
+    body.classList.add("white");
+    localStorage.setItem("whiteStatus", "true");
+  }
+});
