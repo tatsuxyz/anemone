@@ -88,4 +88,20 @@ nav.mobile,
 /* Small Mobile Display */
 @media only screen and (min-device-width: 320px) and (max-device-width: 410px) {
   /* Body */
+  .header-title {
+    font-size: 18px;
+  }
+
+  /* bottom */
+  .meta-info {
+  width: 120px;
+  overflow: hidden;
+  margin: 0px 6px;
+}
+}
+
+@media (max-width: 320px) {
+  .meta-info {
+    width: 90px;
+  }
 }
