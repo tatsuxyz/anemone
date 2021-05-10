@@ -239,6 +239,7 @@ nav {
   font-size: 18px;
   vertical-align: middle;
   display: flex;
+  padding-right: 25px;
 }
 
 .control-volume i {
