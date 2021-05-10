@@ -31,19 +31,18 @@
           <i class="far fa-circle"></i> <span>Anemone</span>
         </div>
         <div class="box search-bar bhe">
-          <input type="text" placeholder="Search" /><i
-            class="fas fa-search"
-          ></i>
+          <input type="text" placeholder="Search" />
+          <i class="fas fa-search"></i>
         </div>
       </div>
       <div class="box nav-right bhe" id="whitemode">
-        Chế độ sáng/tối | <i class="far fa-moon"></i>
+        <i class="far fa-moon"></i>
       </div>
     </nav>
     <!-- end desktop navbar -->
 
     <!-- begin mobile navbar -->
-    <nav class="mobile">
+    <!-- <nav class="mobile">
       <div class="nav-left">
         <div class="box brand bhe" onclick="gotoHome()">
           <i class="far fa-circle"></i>
@@ -52,7 +51,7 @@
       <div class="box nav-right bhe" id="whitemode">
         <i class="far fa-moon"></i>
       </div>
-    </nav>
+    </nav> -->
     <!-- end mobile navbar -->
 
     <!-- begin desktop browse container  -->
@@ -64,36 +63,46 @@
             <div class="grid-item_img">
               <img src="./img/Robber and Bouquet.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Robber and Bouquet</div>
-            <div class="grid-item_artist">Yorushika</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Robber and Bouquet</div>
+              <div class="grid-item_artist">Yorushika</div>
+            </div>
           </div>
           <div class="grid-item bhe" onclick="pickSong(1)">
             <div class="grid-item_img">
               <img src="./img/Spring Thief.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Spring Thief</div>
-            <div class="grid-item_artist">Yorushika</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Spring Thief</div>
+              <div class="grid-item_artist">Yorushika</div>
+            </div>
           </div>
           <div class="grid-item bhe" onclick="pickSong(2)">
             <div class="grid-item_img">
               <img src="./img/Creation.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Creation</div>
-            <div class="grid-item_artist">Yorushika</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Creation</div>
+              <div class="grid-item_artist">Yorushika</div>
+            </div>
           </div>
           <div class="grid-item bhe" onclick="pickSong(3)">
             <div class="grid-item_img">
               <img src="./img/Eat the Wind.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Eat the Wind</div>
-            <div class="grid-item_artist">Yorushika</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Eat the Wind</div>
+              <div class="grid-item_artist">Yorushika</div>
+            </div>
           </div>
           <div class="grid-item bhe" onclick="pickSong(4)">
             <div class="grid-item_img">
               <img src="./img/Liar.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Liar</div>
-            <div class="grid-item_artist">Yorushika</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Liar</div>
+              <div class="grid-item_artist">Yorushika</div>
+            </div>
           </div>
         </div>
       </div>
@@ -105,43 +114,53 @@
             <div class="grid-item_img">
               <img src="./img/FISHANDCHIPS.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">FISHANDCHIPS</div>
-            <div class="grid-item_artist">Toko Miura</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">FISHANDCHIPS</div>
+              <div class="grid-item_artist">Toko Miura</div>
+            </div>
           </div>
           <div class="grid-item bhe" onclick="pickSong(6)">
             <div class="grid-item_img">
               <img src="./img/Shion.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Shion</div>
-            <div class="grid-item_artist">yourness</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Shion</div>
+              <div class="grid-item_artist">yourness</div>
+            </div>
           </div>
           <div class="grid-item bhe" onclick="pickSong(7)">
             <div class="grid-item_img">
               <img src="./img/Gravity.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Gravity</div>
-            <div class="grid-item_artist">BUMP OF CHICKEN</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Gravity</div>
+              <div class="grid-item_artist">BUMP OF CHICKEN</div>
+            </div>
           </div>
           <div class="grid-item bhe" onclick="pickSong(8)">
             <div class="grid-item_img">
               <img src="./img/Ikutoshitsuki.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Ikutoshitsuki</div>
-            <div class="grid-item_artist">Mili</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Ikutoshitsuki</div>
+              <div class="grid-item_artist">Mili</div>
+            </div>
           </div>
           <div class="grid-item bhe" onclick="pickSong(9)">
             <div class="grid-item_img">
               <img src="./img/Alkalemia.jpg" alt="" />
             </div>
-            <div class="grid-item_songName">Alkalemia</div>
-            <div class="grid-item_artist">mol-74</div>
+            <div class="metainfo">
+              <div class="grid-item_songName">Alkalemia</div>
+              <div class="grid-item_artist">mol-74</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- begin list-container -->
-    <div class="mobile-container">
+    <!-- <div class="mobile-container">
       <div class="top-list-bar">
         <div class="header-title">Truyền cảm hứng bởi Yorushika</div>
         <div class="list-container">
@@ -249,7 +268,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- end list-container -->
 
     <div class="black-gap"></div>
@@ -291,10 +310,14 @@
           <div class="volume-size"></div>
         </div>
       </div>
+
+      <div class="showhide-player">
+        <i class="fas fa-caret-up"></i>
+      </div>
     </div>
 
     <!-- begin pMobile dock -->
-    <div class="pMobile-dock">
+    <!-- <div class="pMobile-dock">
       <div class="track-meta">
         <div class="small-albumcover">
           <img src="./img/Creation.jpg" alt="music-cover" id="cover" />
@@ -314,7 +337,7 @@
       <div class="showhide-player">
         <i class="fas fa-caret-up"></i>
       </div>
-    </div>
+    </div> -->
     <!-- end pMobile dock -->
 
     <!-- script file -->

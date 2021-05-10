@@ -1,9 +1,9 @@
 /* Full HD Resolution */
-nav.mobile,
-.mobile-container,
-.pMobile-dock {
+/* nav.mobile, */
+/* .mobile-container */
+/* .pMobile-dock {
   display: none;
-}
+} */
 
 /* Smaller Resolution Desktops and Laptops */
 @media (max-width: 800px) {
@@ -21,59 +21,80 @@ nav.mobile,
   /* nav {
     overflow: hidden;
   } */
-  nav,
-  .search-bar,
-  .player-dock {
+  nav {
+    justify-content: space-between;
+    margin: 10px;
+  }
+  .brand span {
     display: none;
   }
   
-  nav.mobile {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
+  .search-bar {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 34px;
+    padding: 8px;
   }
-  
+  .search-bar input {
+    display: none;
+  }
+  .search-bar i {
+    /* position: relative;
+    left: 9px;
+    top: 0px;
+    right: 5px;
+    bottom: 0px; */
+  }
+  .search-bar input {
+  }
+  ::-webkit-input-placeholder,
+  :-moz-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder {
+    color: transparent;
+  }
+
   /* body */
   /* browser */
   .header-title {
     font-size: 20px;
   }
-  .browse-container {
-    display: none;
-  }
-  .mobile-container {
+  .grid-container {
+    overflow-y: scroll;
     display: block;
   }
-  .list-item {
+  .grid-item {
     margin: 5px 5%;
     width: 109.9%;
     display: flex;
-  }
-  .list-item {
     border-radius: 5px;
     background-color: #434343;
-    border: none;
     padding: 20px;
     font-size: 16px;
     width: 90%;
   }
-  .list-item {
-  }
-  .litem-img {
+  .grid-item_img img {
     border-radius: 5px;
-    display: contents;
-  }
-  .litem-img img {
     padding: 0 10px;
-    border-radius: 5px;
-    width: 20%;
-  }
-  .litem-songname {
-    font-size: 20px;
+    width: 100px;
   }
 
   /* bottom */
-  .pMobile-dock {
+  .player-dock {
+    left: 2.5%;
+    padding: 0 5px;
+    width: 95%;
+  }
+  button#prev,
+  button#next,
+  .progress-container,
+  .control-volume {
+    display: none;
+  }
+  button#play {
+    padding: 16px 0px;
+  }
+  /* .pMobile-dock {
     display: flex;
     position: fixed;
     background-color: #005caf;
@@ -82,7 +103,7 @@ nav.mobile,
     height: 62px;
     bottom: 1%;
     right: 3%;
-  }
+  } */
 }
 
 /* Small Mobile Display */
@@ -94,10 +115,10 @@ nav.mobile,
 
   /* bottom */
   .meta-info {
-  width: 120px;
-  overflow: hidden;
-  margin: 0px 6px;
-}
+    width: 120px;
+    overflow: hidden;
+    margin: 0px 6px;
+  }
 }
 
 @media (max-width: 320px) {

@@ -20,23 +20,6 @@ nav {
   padding: 20px 10px;
 }
 
-.nav-left__menuIcon {
-  font-size: 30px;
-  cursor: pointer;
-  color: #fcfaf2;
-  padding: 10px 15px;
-  border: none;
-}
-
-@media screen and (max-height: 450px) {
-  .sideBar {
-    padding-top: 15px;
-  }
-  .sideBar a {
-    font-size: 18px;
-  }
-}
-
 .nav-left {
   display: flex;
   align-items: center;
@@ -135,7 +118,7 @@ nav {
   justify-content: space-between;
   border-radius: 10px;
   transition: 0.5s;
-  padding: 0 20px;
+  padding: 0 45px;
   top: 90%;
   left: 10%;
   height: 60px;
@@ -153,7 +136,7 @@ nav {
 }
 
 .small-albumcover {
-  padding-left: 30px;
+  margin: 0 10px;
 }
 
 .small-albumcover img {
@@ -181,10 +164,6 @@ nav {
   align-items: center;
   justify-content: center;
   z-index: 1;
-}
-
-.control-playback #next {
-  margin-right: 25px;
 }
 
 /* playback option */
@@ -239,7 +218,6 @@ nav {
   font-size: 18px;
   vertical-align: middle;
   display: flex;
-  padding-right: 25px;
 }
 
 .control-volume i {
@@ -277,8 +255,7 @@ nav {
   background-color: #113285;
   border-radius: 5px;
   cursor: pointer;
-  margin: 28px 0;
-  margin-right: 60px;
+  margin: 28px 20px;
   height: 4px;
   width: 100%;
 }
