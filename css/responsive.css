@@ -1,0 +1,91 @@
+/* Full HD Resolution */
+nav.mobile,
+.mobile-container,
+.pMobile-dock {
+  display: none;
+}
+
+/* Smaller Resolution Desktops and Laptops */
+@media (max-width: 800px) {
+  /*  */
+}
+
+/* Smaller Device (iPad, Tablet) */
+@media (max-width: 650px) {
+  /*  */
+}
+
+/* Flagship or Phablet */
+@media (max-width: 450px) {
+  /* Top */
+  /* nav {
+    overflow: hidden;
+  } */
+  nav,
+  .search-bar,
+  .player-dock {
+    display: none;
+  }
+  
+  nav.mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  /* body */
+  /* browser */
+  .header-title {
+    font-size: 20px;
+  }
+  .browse-container {
+    display: none;
+  }
+  .mobile-container {
+    display: block;
+  }
+  .list-item {
+    margin: 5px 5%;
+    width: 109.9%;
+    display: flex;
+  }
+  .list-item {
+    border-radius: 5px;
+    background-color: #434343;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    width: 90%;
+  }
+  .list-item {
+  }
+  .litem-img {
+    border-radius: 5px;
+    display: contents;
+  }
+  .litem-img img {
+    padding: 0 10px;
+    border-radius: 5px;
+    width: 20%;
+  }
+  .litem-songname {
+    font-size: 20px;
+  }
+
+  /* bottom */
+  .pMobile-dock {
+    display: flex;
+    position: fixed;
+    background-color: #005caf;
+    border-radius: 5px;
+    width: 95%;
+    height: 62px;
+    bottom: 1%;
+    right: 3%;
+  }
+}
+
+/* Small Mobile Display */
+@media only screen and (min-device-width: 320px) and (max-device-width: 410px) {
+  /* Body */
+}
