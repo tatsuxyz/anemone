@@ -8,7 +8,14 @@ body.white {
   transition: 0.5s;
 }
 
+
 /* Top */
+body.dark nav {
+  background-color: rgba(28,28,28,0.3);
+}
+body.white nav {
+  background-color: rgba(252, 250, 242,0.3);
+}
 body.white .search-bar {
   background-color: #fffffb;
 }
