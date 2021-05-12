@@ -106,6 +106,10 @@ function pickSong(Index) {
   playSong();
 }
 
+// function loopSong(){
+
+// }
+
 // Progress bar
 function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
