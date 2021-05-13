@@ -15,6 +15,12 @@ body.dark nav {
 body.white nav {
   background-color: rgba(252, 250, 242, 0.3);
 }
+body.dark nav:hover {
+  background-color: rgba(28, 28, 28);
+}
+body.white nav:hover {
+  background-color: rgba(252, 250, 242);
+}
 body.white .search-bar {
   background-color: rgba(255, 255, 251, 0.3);
 }
@@ -32,7 +38,6 @@ body.white .search-bar {
 body.dark .search-bar:hover {
   background-color: rgba(67, 67, 67);
 }
-
 body.white .search-bar:hover {
   background-color: rgba(255, 255, 251);
 }
