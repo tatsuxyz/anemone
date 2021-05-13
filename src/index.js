@@ -204,8 +204,10 @@ let searchIcon = document.querySelector("#searchIcon");
 searchBar.addEventListener("click", () => {
   searchBar.style.transition = "0.25s";
   searchIcon.style.display = "none";
-  searchBar.style.padding = "0 0 0 20px";
   searchBar.style.borderRadius = "20px";
+  setTimeout(() => {
+    searchBar.style.padding = "0 0 0 20px";
+  }, 100);
   setTimeout(() => {
     searchBar.style.width = "270.16px";
   }, 100);
@@ -220,15 +222,15 @@ let musicPlayer = document.querySelector("#musicPlayer");
 let showPlayer = document.querySelector(".show-player");
 let hidePlayer = document.querySelector(".hide-player");
 let volControl = document.querySelector(".control-volume");
-let metaInfo = document.querySelector(".meta-info")
+let metaInfo = document.querySelector(".meta-info");
 
 function appendPlayer() {
   musicPlayer.style.height = "37%";
   musicPlayer.style.top = "60%";
-  musicPlayer.style.padding = "15px 10px"
+  musicPlayer.style.padding = "15px 10px";
   musicPlayer.style.display = "block";
-  title.style.width = "160px";
-  artistTitle.style.width = "160px";
+  title.style.width = "200px";
+  artistTitle.style.width = "200px";
   showPlayer.style.display = "none";
   hidePlayer.style.display = "inline";
   hidePlayer.style.padding = "0px 0px 0px 50px";
@@ -245,10 +247,10 @@ function appendPlayer() {
 function removePlayer() {
   musicPlayer.style.height = "60px";
   musicPlayer.style.top = "90%";
-  musicPlayer.style.padding = "0px 0px"
+  musicPlayer.style.padding = "0px 0px";
   musicPlayer.style.display = "flex";
-  title.style.width = "60px";
-  artistTitle.style.width = "60px";
+  title.style.width = "100%";
+  artistTitle.style.width = "100%";
   hidePlayer.style.display = "none";
   showPlayer.style.display = "inline";
   hidePlayer.style.padding = "0px 0px 0px 0px";
