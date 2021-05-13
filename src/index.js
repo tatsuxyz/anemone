@@ -215,7 +215,7 @@ searchBar.addEventListener("click", () => {
   searchInput.style.width = "70%";
   setTimeout(() => {
     searchIcon.style.display = "block";
-    searchIcon.style.padding = "12px 20px"
+    searchIcon.style.padding = "12px 20px";
   }, 500);
 });
 
@@ -231,26 +231,25 @@ function appendPlayer() {
   musicPlayer.style.top = "60%";
   musicPlayer.style.padding = "15px 10px";
   musicPlayer.style.display = "block";
-  title.style.width = "200px";
-  artistTitle.style.width = "200px";
-  showPlayer.style.display = "none";
-  hidePlayer.style.display = "inline";
-  hidePlayer.style.padding = "0px 0px 0px 50px";
-  progressContainer.style.display = "block";
-  progressContainer.style.width = "90%";
-  progress.style.display = "block";
-  volControl.style.display = "flex";
-  volControl.style.position = "absolute";
-  volControl.style.right = "10%";
-  prevBtn.style.display = "inline";
-  nextBtn.style.display = "inline";
+
+  setTimeout(() => {
+    title.style.width = "200px";
+    artistTitle.style.width = "200px";
+    showPlayer.style.display = "none";
+    hidePlayer.style.display = "inline";
+    hidePlayer.style.padding = "0px 0px 0px 50px";
+    progressContainer.style.display = "block";
+    progressContainer.style.width = "90%";
+    progress.style.display = "block";
+    volControl.style.display = "flex";
+    volControl.style.position = "absolute";
+    volControl.style.right = "10%";
+    prevBtn.style.display = "inline";
+    nextBtn.style.display = "inline";
+  }, 200);
 }
 
 function removePlayer() {
-  musicPlayer.style.height = "60px";
-  musicPlayer.style.top = "90%";
-  musicPlayer.style.padding = "0px 0px";
-  musicPlayer.style.display = "flex";
   title.style.width = "100%";
   artistTitle.style.width = "100%";
   hidePlayer.style.display = "none";
@@ -264,4 +263,11 @@ function removePlayer() {
   volControl.style.right = "0";
   prevBtn.style.display = "none";
   nextBtn.style.display = "none";
+
+  setTimeout(() => {
+    musicPlayer.style.height = "60px";
+    musicPlayer.style.top = "90%";
+    musicPlayer.style.padding = "0px 0px";
+    musicPlayer.style.display = "flex";
+  }, 200);
 }
