@@ -9,12 +9,37 @@ body.white {
 }
 
 /* Top */
+body.dark nav {
+  background-color: rgba(28, 28, 28, 0.3);
+}
+body.white nav {
+  background-color: rgba(252, 250, 242, 0.3);
+}
+body.dark nav:hover {
+  background-color: rgba(28, 28, 28);
+}
+body.white nav:hover {
+  background-color: rgba(252, 250, 242);
+}
 body.white .search-bar {
-  background-color: #fffffb;
+  background-color: rgba(255, 255, 251, 0.3);
 }
 body.white .search-bar input,
 body.white .search-bar i {
   color: #434343;
+}
+body.dark .search-bar {
+  background-color: rgba(67, 67, 67, 0.5);
+}
+body.white .search-bar {
+  background-color: rgba(255, 255, 251, 0.5);
+}
+
+body.dark .search-bar:hover {
+  background-color: rgba(67, 67, 67);
+}
+body.white .search-bar:hover {
+  background-color: rgba(255, 255, 251);
 }
 
 /* Grid */

@@ -15,46 +15,37 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
     <link rel="stylesheet" href="./css/white.css" />
   </head>
 
   <body class="dark">
-    <!-- begin desktop navbar  -->
-    <nav>
-      <div class="nav-left">
-        <div
-          class="box brand bhe"
-          style="margin-right: 20px"
-          onclick="gotoHome()"
-        >
-          <i class="far fa-circle"></i> <span>Anemone</span>
-        </div>
-        <div class="box search-bar bhe">
-          <input type="text" placeholder="Search" />
-          <i class="fas fa-search"></i>
-        </div>
-      </div>
-      <div class="box nav-right bhe" id="whitemode">
-        <i class="far fa-moon"></i>
-      </div>
-    </nav>
-    <!-- end desktop navbar -->
 
-    <!-- begin mobile navbar -->
-    <!-- <nav class="mobile">
-      <div class="nav-left">
-        <div class="box brand bhe" onclick="gotoHome()">
-          <i class="far fa-circle"></i>
+    <!-- begin navbar  -->
+    <div class="acryllic">
+      <nav>
+        <div class="nav-left">
+          <div
+            class="box brand bhe"
+            style="margin-right: 20px"
+            onclick="gotoHome()"
+          >
+            <i class="far fa-circle"></i> <span>Anemone</span>
+          </div>
+          <div class="box search-bar">
+            <input id="search" type="text" placeholder="Search" />
+            <i class="fas fa-search" id="searchIcon"></i>
+          </div>
         </div>
-      </div>
-      <div class="box nav-right bhe" id="whitemode">
-        <i class="far fa-moon"></i>
-      </div>
-    </nav> -->
-    <!-- end mobile navbar -->
+        <div class="box nav-right bhe" id="whitemode">
+          <i class="far fa-moon"></i>
+        </div>
+      </nav>
+    </div>
+    <!-- end navbar -->
 
-    <!-- begin desktop browse container  -->
+    <div class="black-gap"></div>
+
+    <!-- begin browse container  -->
     <div class="browse-container">
       <div class="top-list-bar">
         <div class="header-title">Truyền cảm hứng bởi Yorushika</div>
@@ -159,123 +150,12 @@
       </div>
     </div>
 
-    <!-- begin list-container -->
-    <!-- <div class="mobile-container">
-      <div class="top-list-bar">
-        <div class="header-title">Truyền cảm hứng bởi Yorushika</div>
-        <div class="list-container">
-          <div class="list-item bhe" onclick="pickSong(0)">
-            <div class="litem-img">
-              <img src="./img/Robber and Bouquet.jpg" alt="" />
-            </div>
-            <div class="lmeta">
-              <div class="litem-songname">Robber and Bouquet</div>
-              <div class="litem-artist">Yorushika</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="list-item bhe" onclick="pickSong(1)">
-          <div class="litem-img">
-            <img src="./img/Spring Thief.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">Spring Thief</div>
-            <div class="litem-artist">Yorushika</div>
-          </div>
-        </div>
-
-        <div class="list-item bhe" onclick="pickSong(2)">
-          <div class="litem-img">
-            <img src="./img/Creation.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">Creation</div>
-            <div class="litem-artist">Yorushika</div>
-          </div>
-        </div>
-
-        <div class="list-item bhe" onclick="pickSong(3)">
-          <div class="litem-img">
-            <img src="./img/Eat the Wind.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">Eat the Wind</div>
-            <div class="litem-artist">Yorushika</div>
-          </div>
-        </div>
-
-        <div class="list-item bhe" onclick="pickSong(4)">
-          <div class="litem-img">
-            <img src="./img/Liar.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">Liar</div>
-            <div class="litem-artist">Yorushika</div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-list-bar">
-        <div class="header-title">Khám phá thêm nhạc cùng thể loại</div>
-
-        <div class="list-item bhe" onclick="pickSong(5)">
-          <div class="litem-img">
-            <img src="./img/FISHANDCHIPS.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">FISHANDCHIPS</div>
-            <div class="litem-artist">Toko Miura</div>
-          </div>
-        </div>
-
-        <div class="list-item bhe" onclick="pickSong(6)">
-          <div class="litem-img">
-            <img src="./img/Shion.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">Shion</div>
-            <div class="litem-artist">yourness</div>
-          </div>
-        </div>
-
-        <div class="list-item bhe" onclick="pickSong(7)">
-          <div class="litem-img">
-            <img src="./img/Gravity.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">Gravity</div>
-            <div class="litem-artist">BUMP OF CHICKEN</div>
-          </div>
-        </div>
-
-        <div class="list-item bhe" onclick="pickSong(8)">
-          <div class="litem-img">
-            <img src="./img/Ikutoshitsuki.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">Ikutoshitsuki</div>
-            <div class="litem-artist">Mili</div>
-          </div>
-        </div>
-
-        <div class="list-item bhe" onclick="pickSong(9)">
-          <div class="litem-img">
-            <img src="./img/Alkalemia.jpg" alt="" />
-          </div>
-          <div class="lmeta">
-            <div class="litem-songname">Alkalemia</div>
-            <div class="litem-artist">mol-74</div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- end list-container -->
-
     <div class="black-gap"></div>
 
-    <div class="player-dock">
+    <!-- begin music player -->
+    <div class="player-dock" id="musicPlayer">
       <div class="track-meta">
-        <div class="small-albumcover">
+        <div class="small-albumcover" >
           <img src="./img/Creation.jpg" alt="music-cover" id="cover" />
         </div>
         <div class="meta-info">
@@ -311,34 +191,15 @@
         </div>
       </div>
 
-      <div class="showhide-player">
+      <div class="show-player" onclick="appendPlayer()">
         <i class="fas fa-caret-up"></i>
+      </div>
+
+      <div class="hide-player" onclick="removePlayer()">
+        <i class="fas fa-caret-down"></i>
       </div>
     </div>
-
-    <!-- begin pMobile dock -->
-    <!-- <div class="pMobile-dock">
-      <div class="track-meta">
-        <div class="small-albumcover">
-          <img src="./img/Creation.jpg" alt="music-cover" id="cover" />
-        </div>
-        <div class="meta-info">
-          <div class="track-title" id="title">NaN</div>
-          <div class="artist-name" id="artist">NaN</div>
-        </div>
-      </div>
-
-      <div class="control-playback">
-        <button id="play" class="action-btn">
-          <i class="fas fa-play"></i>
-        </button>
-      </div>
-
-      <div class="showhide-player">
-        <i class="fas fa-caret-up"></i>
-      </div>
-    </div> -->
-    <!-- end pMobile dock -->
+    <!-- end music player -->
 
     <!-- script file -->
     <script src="./src/data.js"></script>
