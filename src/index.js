@@ -209,11 +209,13 @@ searchBar.addEventListener("click", () => {
     searchBar.style.padding = "0 0 0 20px";
   }, 100);
   setTimeout(() => {
-    searchBar.style.width = "270.16px";
+    searchBar.style.width = "172px";
   }, 100);
   searchInput.style.display = "inline";
+  searchInput.style.width = "70%";
   setTimeout(() => {
-    searchIcon.style.display = "inline";
+    searchIcon.style.display = "block";
+    searchIcon.style.padding = "12px 20px"
   }, 500);
 });
 
