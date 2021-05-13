@@ -196,3 +196,61 @@ wdIcon.addEventListener("click", function () {
     localStorage.setItem("whiteStatus", "true");
   }
 });
+
+// append search mobile
+let searchBar = document.querySelector(".search-bar");
+let searchInput = document.querySelector("#search");
+let searchIcon = document.querySelector("#searchIcon");
+searchBar.addEventListener("click", () => {
+  searchBar.style.transition = "0.25s";
+  searchIcon.style.display = "none";
+  searchBar.style.padding = "0 0 0 20px";
+  searchBar.style.borderRadius = "20px";
+  setTimeout(() => {
+    searchBar.style.width = "270.16px";
+  }, 100);
+  searchInput.style.display = "inline";
+  setTimeout(() => {
+    searchIcon.style.display = "inline";
+  }, 500);
+});
+
+// append player
+let musicPlayer = document.querySelector("#musicPlayer");
+let showPlayer = document.querySelector(".show-player");
+let hidePlayer = document.querySelector(".hide-player");
+let volControl = document.querySelector(".control-volume");
+
+function appendPlayer() {
+  musicPlayer.style.height = "37%";
+  musicPlayer.style.top = "60%";
+  musicPlayer.style.display = "block";
+  showPlayer.style.display = "none";
+  hidePlayer.style.display = "inline";
+  hidePlayer.style.padding = "0px 0px 0px 50px";
+  progressContainer.style.display = "block";
+  progressContainer.style.width = "90%";
+  progress.style.display = "block";
+  volControl.style.display = "flex";
+  volControl.style.position = "absolute";
+  volControl.style.right = "10%";
+  prevBtn.style.display = "inline";
+  nextBtn.style.display = "inline";
+}
+
+function removePlayer() {
+  musicPlayer.style.height = "60px";
+  musicPlayer.style.top = "90%";
+  musicPlayer.style.display = "flex";
+  hidePlayer.style.display = "none";
+  showPlayer.style.display = "inline";
+  hidePlayer.style.padding = "0px 0px 0px 0px";
+  progressContainer.style.display = "none";
+  progressContainer.style.width = "100%";
+  progress.style.display = "none";
+  volControl.style.display = "none";
+  volControl.style.position = "absolute";
+  volControl.style.right = "0";
+  prevBtn.style.display = "none";
+  nextBtn.style.display = "none";
+}

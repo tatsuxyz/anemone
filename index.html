@@ -16,11 +16,10 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/white.css" />
-    <!-- reponsive style -->
-    <link rel="stylesheet" href="./css/reponsive/mobile.css" />
   </head>
 
   <body class="dark">
+
     <!-- begin navbar  -->
     <div class="acryllic">
       <nav>
@@ -33,8 +32,8 @@
             <i class="far fa-circle"></i> <span>Anemone</span>
           </div>
           <div class="box search-bar">
-            <input type="text" placeholder="Search" />
-            <i class="fas fa-search"></i>
+            <input id="search" type="text" placeholder="Search" />
+            <i class="fas fa-search" id="searchIcon"></i>
           </div>
         </div>
         <div class="box nav-right bhe" id="whitemode">
@@ -153,9 +152,10 @@
 
     <div class="black-gap"></div>
 
-    <div class="player-dock">
+    <!-- begin music player -->
+    <div class="player-dock" id="musicPlayer">
       <div class="track-meta">
-        <div class="small-albumcover">
+        <div class="small-albumcover" >
           <img src="./img/Creation.jpg" alt="music-cover" id="cover" />
         </div>
         <div class="meta-info">
@@ -191,10 +191,15 @@
         </div>
       </div>
 
-      <div class="showhide-player">
+      <div class="show-player" onclick="appendPlayer()">
         <i class="fas fa-caret-up"></i>
       </div>
+
+      <div class="hide-player" onclick="removePlayer()">
+        <i class="fas fa-caret-down"></i>
+      </div>
     </div>
+    <!-- end music player -->
 
     <!-- script file -->
     <script src="./src/data.js"></script>
