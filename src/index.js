@@ -1,4 +1,8 @@
 /* ----------- Area for Declare Variable ------------- */
+// metadata
+// const songs = require("../data/songs.json");
+// const artists = require("../data/artists.json");
+
 // music-player
 const musicContainer = document.querySelector(".player-dock");
 

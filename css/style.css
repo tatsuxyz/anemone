@@ -46,10 +46,17 @@ nav {
 
 .brand {
   cursor: pointer;
-  background-color: #005caf;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 92, 175, 0.7);
+  transition: 0.5s;
   border-radius: 5px;
   padding: 10px 10px;
   font-weight: bold;
+}
+
+.brand:hover {
+  background-color: rgba(0, 92, 175);
 }
 
 .brand i,
@@ -58,7 +65,8 @@ nav {
 }
 
 .search-bar {
-  background-color: #434343;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   padding: 0px 25px;
   border-radius: 20px;
 }
@@ -76,10 +84,16 @@ nav {
 }
 .nav-right {
   cursor: pointer;
-  background-color: #005caf;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 92, 175, 0.7);
+  transition: 0.5s;
   border-radius: 5px;
   padding: 10px 20px;
   margin: 5px;
+}
+.nav-right:hover {
+  background-color: rgba(0, 92, 175);
 }
 
 /* body */
@@ -134,7 +148,9 @@ nav {
 .player-dock {
   display: flex;
   position: fixed;
-  background-color: #005caf;
+  background-color: rgba(0, 92, 175, 0.8);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   justify-content: space-between;
   border-radius: 10px;
   transition: 0.5s;
@@ -143,6 +159,10 @@ nav {
   left: 10%;
   height: 60px;
   width: 80%;
+}
+.player-dock:hover {
+  background-color: rgba(0, 92, 175);
+  transform: scale(1.001);
 }
 
 .showhide-player i {
