@@ -492,7 +492,7 @@ nav {
     display: inline;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1080px) {
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
   .player-dock {
     padding: 0 10px;
   }
