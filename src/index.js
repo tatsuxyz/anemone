@@ -53,6 +53,7 @@ function loadSong(song) {
   audio.src = `./music/${song}.mp3`;
   cover.src = `./img/${song}.jpg`;
 }
+
 function loadArtist(artist) {
   artistTitle.innerText = artist;
 }
@@ -65,6 +66,7 @@ function playSong() {
 
   audio.play();
 }
+
 function pauseSong() {
   musicContainer.classList.remove("play");
   playBtn.querySelector("i.fas").classList.add("fa-play");
@@ -87,6 +89,7 @@ function prevSong() {
   loadArtist(artists[artistIndex]);
   playSong();
 }
+
 function nextSong() {
   songIndex++;
   artistIndex++;
@@ -116,6 +119,7 @@ function updateProgress(e) {
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
 }
+
 function setProgress(e) {
   const width = this.clientWidth;
   const clickX = e.offsetX;
@@ -127,14 +131,17 @@ function setProgress(e) {
 // Audio Volume
 audio.volume = 0.7;
 volumeSize.style.width = "70%";
+
 function volDown() {
   volIcon.querySelector("i.fas").classList.remove("fa-volume-up");
   volIcon.querySelector("i.fas").classList.add("fa-volume-down");
 }
+
 function volUp() {
   volIcon.querySelector("i.fas").classList.add("fa-volume-up");
   volIcon.querySelector("i.fas").classList.remove("fa-volume-down");
 }
+
 function setVolume(e) {
   let currentVol = audio.volume;
   const width = this.clientWidth;
@@ -199,7 +206,7 @@ wdIcon.addEventListener("click", function () {
 
 // append search mobile
 let searchBar = document.querySelector(".search-bar");
-let searchInput = document.querySelector("#search");
+let searchInput = document.querySelector("#myInput");
 let searchIcon = document.querySelector("#searchIcon");
 searchBar.addEventListener("click", () => {
   searchBar.style.transition = "0.25s";
@@ -271,3 +278,90 @@ function removePlayer() {
     musicPlayer.style.display = "flex";
   }, 200);
 }
+
+// autosuggestion for search features
+function autosuggestion(inp, arr) {
+  let currentFocus;
+  inp.addEventListener("input", (e) => {
+    let a,
+      b,
+      val = this.value;
+
+    closeAllLists();
+    if (!val) {
+      return false;
+    }
+    currentFocus--;
+
+    a = document.createElement("div");
+    a.setAttribute("id", this.id + "search-bar-list");
+    a.setAttribute("class", "autocomplete-items");
+
+    this.parentNode.appendChild(a);
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].includes(val)) {
+        b = document.createElement("div");
+        b.className = "item";
+        b.innerHTML = arr[i].substr(0, val.length);
+        b.innerHTML += "<input type='hidden' value=''" + arr[i] + "' >";
+        b.addEventListener("click", (e) => {
+          inp.value = this.getElementsByTagName("input")[0].value;
+          for (let i = 0; i > songs.length; i++) {
+            if (inp.value === songs[i]) {
+              pickSong(i);
+            }
+          }
+          closeAllLists();
+        });
+        a.appendChild(b);
+      }
+    }
+  });
+  inp.addEventListener("keydown", (e) => {
+    let x = document.getElementById(this.id + "search-bar-list");
+    if (x) {
+      x = x.getElementsByTagName("div");
+    }
+    if (e.keyCode === 40) {
+      currentFocus++;
+      addActive(x);
+    } else if (e.keyCode === 38) {
+      currentFocus--;
+      addActive(x);
+    } else if (e.keyCode === 13) {
+      a.preventDefault();
+      if (currentFocus > -1) {
+        if (x) x[currentFocus].click();
+      }
+    }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = x.length - 1;
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("search-bar-active");
+  }
+  function removeActive(x) {
+    for (let i = 0; i < x.length; i++) {
+      x[i].classList.remove("search-bar-active");
+    }
+  }
+  function closeAllLists(e) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    let x = document.getElementsByClassName("search-bar-items");
+    for (var i = 0; i < x.length; i++) {
+      if (e != x[i] && e != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  document.addEventListener("click", function (e) {
+    closeAllLists(e.target);
+  });
+}
+
+autosuggestion(document.getElementById("myInput"), songs);

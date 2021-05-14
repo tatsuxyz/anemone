@@ -97,6 +97,40 @@ nav {
   0%,100% { opacity: 0 }
   50% { opacity: 1 }
 }
+
+/* search */
+
+.search-bar-items {
+  border-radius: 10px;
+  background-color: #434343;
+  position: absolute;
+  /* border: 1px solid #d4d4d4; */
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.search-bar-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/*when hovering an item:*/
+.search-bar-items div:hover {
+  transform: scale(1.05);
+  transition: 0.2s; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.search-bar-active {
+  background-color: #005caf !important; 
+  color: #ffffff; 
+}
+
 .nav-right {
   cursor: pointer;
   -webkit-backdrop-filter: blur(20px);
