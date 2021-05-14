@@ -295,7 +295,7 @@ function autosuggestion(inp, arr) {
 
     a = document.createElement("div");
     a.setAttribute("id", this.id + "search-bar-list");
-    a.setAttribute("class", "autocomplete-items");
+    a.setAttribute("class", "search-bar-items");
 
     this.parentNode.appendChild(a);
 
@@ -323,13 +323,13 @@ function autosuggestion(inp, arr) {
     if (x) {
       x = x.getElementsByTagName("div");
     }
-    if (e.keyCode === 40) {
+    if (e.keyCode == 40) {
       currentFocus++;
       addActive(x);
-    } else if (e.keyCode === 38) {
+    } else if (e.keyCode == 38) {
       currentFocus--;
       addActive(x);
-    } else if (e.keyCode === 13) {
+    } else if (e.keyCode == 13) {
       a.preventDefault();
       if (currentFocus > -1) {
         if (x) x[currentFocus].click();
@@ -359,7 +359,7 @@ function autosuggestion(inp, arr) {
       }
     }
   }
-  document.addEventListener("click", function (e) {
+  document.addEventListener("click", (e) => {
     closeAllLists(e.target);
   });
 }
