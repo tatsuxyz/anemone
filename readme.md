@@ -15,13 +15,13 @@ Sử dụng thanh phát nhạc bên dưới cùng màn hình để điều khi�
 ### Giao diện sáng/tối (Dark/White Theme)
 Giao diện sáng tối cho người dùng tuỳ chỉnh lại trải nghiệm sử dụng trang web của mình bằng cách chọn giao diện bạn cảm thấy phù hợp cho mình. Mặc định thì giao diện của anemone sẽ ở giao diện tối, để chuyển sang giao diện bạn muốn dùng (chẳng hạn như giao diện sáng) hãy sử dụng nút chuyển giao diện sáng tối (có biểu tượng hình mặt trời hoặc mặt trăng) ở góc phải trên cùng của trang web để chuyển giữa giao diện sáng tối.
 
-### Danh sách phát cho sẵn
+### Danh sách phát cho sẵn (Playlists)
 Các danh sách phát cho sẵn đều hiển thị ở trang chủ, chọn bài hát bạn muốn phát và trang sẽ phát bài nhạc bạn vừa chọn.
 
-### Tìm kiếm
+### Tìm kiếm (Search for a song)
 Sử dụng thanh tìm kiếm bên cạnh menu để tìm bài hát có trên server của chúng tôi. Dùng chuột hoặc mũi tên lên xuống để chọn bài hát bạn muốn tìm phát và ấn Enter để phát.
 
-### Hiển thị đa thiết bị
+### Hiển thị đa thiết bị (Reponsive Display)
 Tuỳ vào thiết bị bạn đang sử dụng, trang web của chúng tôi sẽ hiển thị sao cho phù hợp với kích cỡ màn hình bạn đang sử dụng. Mọi thứ sẽ hơi khác chút nhưng về thao tác sử dụng vẫn tương đồng trên tất cả các thiết bị
 
 ## Giấy phép (Licences)
