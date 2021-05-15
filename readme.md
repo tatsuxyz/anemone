@@ -26,3 +26,7 @@ Tuỳ vào thiết bị bạn đang sử dụng, trang web của chúng tôi s�
 
 ## Giấy phép (Licences)
 Hiện tại trang chưa hỗ trợ giấy phép công cộng, mã nguồn này chỉ sử dụng với mục đích quảng bá cá nhân của chủ repository. Nghiêm cấm các hình thức sao chép lại mã nguồn và sử dụng lại dưới mọi hình thức.
+
+## Tác giả (Authors)
+Hoàng Long (luna) <br>
+Trường Giang
