@@ -36,6 +36,9 @@ const body = document.querySelector("body");
 function gotoHome() {
   window.open("/", "_self");
 }
+function gotoAbout() {
+  window.open("/about.html", "_self");
+}
 
 /* --------------------- INDEX SCRIPT ------------------------- */
 /* -------- Functions for Music Player --------- */

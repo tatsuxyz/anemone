@@ -95,8 +95,13 @@ nav {
   cursor: pointer;
 }
 @keyframes fade {
-  0%,100% { opacity: 0 }
-  50% { opacity: 1 }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* autosuggestion */
@@ -122,7 +127,7 @@ nav {
 /*when hovering an item:*/
 .autocomplete-items div:hover {
   transform: scale(1.02);
-  transition: 0.2s; 
+  transition: 0.2s;
   border-radius: 5px;
 }
 
@@ -416,7 +421,7 @@ nav {
     display: none;
   }
   .autocomplete i {
-    padding: 0 0;    
+    padding: 0 0;
   }
 
   /* body */
@@ -592,5 +597,31 @@ nav {
 @media screen and (max-width: 1465px) {
   .brand span {
     display: none;
+  }
+}
+
+/* inspired section */
+body.inspired {
+  background: url("../img/icon/background.png") no-repeat center center fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #1c1c1c;
+}
+
+body.inspired .introduce {
+  font-size: 26px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+body.inspired a {
+  color: #fcfaf2;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 280px) and (max-width: 673px) {
+  body.inspired .introduce {
+    width: 90%;
   }
 }
