@@ -620,6 +620,10 @@ body.inspired a {
   text-decoration: none;
 }
 
+body.inspired nav {
+  height: 88.4px;
+}
+
 @media screen and (min-width: 280px) and (max-width: 673px) {
   body.inspired .introduce {
     width: 90%;
