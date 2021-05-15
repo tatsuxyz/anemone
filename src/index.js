@@ -205,26 +205,133 @@ wdIcon.addEventListener("click", function () {
 });
 
 // append search mobile
-let searchBar = document.querySelector(".search-bar");
-let searchInput = document.querySelector("#myInput");
-let searchIcon = document.querySelector("#searchIcon");
-searchBar.addEventListener("click", () => {
-  searchBar.style.transition = "0.25s";
-  searchIcon.style.display = "none";
-  searchBar.style.borderRadius = "20px";
-  setTimeout(() => {
-    searchBar.style.padding = "0 0 0 20px";
-  }, 100);
-  setTimeout(() => {
-    searchBar.style.width = "172px";
-  }, 100);
-  searchInput.style.display = "inline";
-  searchInput.style.width = "70%";
-  setTimeout(() => {
-    searchIcon.style.display = "block";
-    searchIcon.style.padding = "12px 20px";
-  }, 500);
-});
+// let searchBar = document.querySelector(".search-bar");
+// let searchInput = document.querySelector("#myInput");
+// let searchIcon = document.querySelector("#searchIcon");
+// searchBar.addEventListener("click", () => {
+//   searchBar.style.transition = "0.25s";
+//   searchIcon.style.display = "none";
+//   searchBar.style.borderRadius = "20px";
+//   setTimeout(() => {
+//     searchBar.style.padding = "0 0 0 20px";
+//   }, 100);
+//   setTimeout(() => {
+//     searchBar.style.width = "172px";
+//   }, 100);
+//   searchInput.style.display = "inline";
+//   searchInput.style.width = "70%";
+//   setTimeout(() => {
+//     searchIcon.style.display = "block";
+//     searchIcon.style.padding = "12px 20px";
+//   }, 500);
+// });
+
+// autosuggestion for search features
+
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  let currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      let a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].includes(val)) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          b.className = "item";
+          /*make the matching letters bold:*/
+          b.innerHTML = arr[i].substr(0, val.length);
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              for(let i=0; i<songs.length; i++){
+                if(inp.value === songs[i]){
+                  pickSong(i);
+                }
+              }
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      let x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (let i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    let x = document.getElementsByClassName("autocomplete-items");
+    for (let i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+autocomplete(document.getElementById("myInput"), songs);
 
 // append player
 let musicPlayer = document.querySelector("#musicPlayer");
@@ -279,89 +386,5 @@ function removePlayer() {
   }, 200);
 }
 
-// autosuggestion for search features
-function autosuggestion(inp, arr) {
-  let currentFocus;
-  inp.addEventListener("input", (e) => {
-    let a,
-      b,
-      val = this.value;
 
-    closeAllLists();
-    if (!val) {
-      return false;
-    }
-    currentFocus--;
 
-    a = document.createElement("div");
-    a.setAttribute("id", this.id + "search-bar-list");
-    a.setAttribute("class", "search-bar-items");
-
-    this.parentNode.appendChild(a);
-
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].includes(val)) {
-        b = document.createElement("div");
-        b.className = "item";
-        b.innerHTML = arr[i].substr(0, val.length);
-        b.innerHTML += "<input type='hidden' value=''" + arr[i] + "' >";
-        b.addEventListener("click", (e) => {
-          inp.value = this.getElementsByTagName("input")[0].value;
-          for (let i = 0; i > songs.length; i++) {
-            if (inp.value === songs[i]) {
-              pickSong(i);
-            }
-          }
-          closeAllLists();
-        });
-        a.appendChild(b);
-      }
-    }
-  });
-  inp.addEventListener("keydown", (e) => {
-    let x = document.getElementById(this.id + "search-bar-list");
-    if (x) {
-      x = x.getElementsByTagName("div");
-    }
-    if (e.keyCode == 40) {
-      currentFocus++;
-      addActive(x);
-    } else if (e.keyCode == 38) {
-      currentFocus--;
-      addActive(x);
-    } else if (e.keyCode == 13) {
-      a.preventDefault();
-      if (currentFocus > -1) {
-        if (x) x[currentFocus].click();
-      }
-    }
-  });
-  function addActive(x) {
-    if (!x) return false;
-    removeActive(x);
-    if (currentFocus >= x.length) currentFocus = 0;
-    if (currentFocus < 0) currentFocus = x.length - 1;
-    /*add class "autocomplete-active":*/
-    x[currentFocus].classList.add("search-bar-active");
-  }
-  function removeActive(x) {
-    for (let i = 0; i < x.length; i++) {
-      x[i].classList.remove("search-bar-active");
-    }
-  }
-  function closeAllLists(e) {
-    /*close all autocomplete lists in the document,
-    except the one passed as an argument:*/
-    let x = document.getElementsByClassName("search-bar-items");
-    for (var i = 0; i < x.length; i++) {
-      if (e != x[i] && e != inp) {
-        x[i].parentNode.removeChild(x[i]);
-      }
-    }
-  }
-  document.addEventListener("click", (e) => {
-    closeAllLists(e.target);
-  });
-}
-
-autosuggestion(document.getElementById("myInput"), songs);

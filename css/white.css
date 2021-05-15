@@ -21,25 +21,47 @@ body.dark nav:hover {
 body.white nav:hover {
   background-color: rgba(252, 250, 242);
 }
-body.white .search-bar {
+body.white .autocomplete {
   background-color: rgba(255, 255, 251, 0.3);
 }
-body.white .search-bar input,
-body.white .search-bar i {
+body.white .autocomplete input,
+body.white .autocomplete i {
   color: #434343;
 }
-body.dark .search-bar {
+body.dark .autocomplete {
   background-color: rgba(67, 67, 67, 0.5);
 }
-body.white .search-bar {
+body.white .autocomplete {
   background-color: rgba(255, 255, 251, 0.5);
 }
 
-body.dark .search-bar:hover {
+body.dark .autocomplete:hover {
   background-color: rgba(67, 67, 67);
 }
-body.white .search-bar:hover {
+body.white .autocomplete:hover {
   background-color: rgba(255, 255, 251);
+}
+
+body.dark .autocomplete-items {
+  background-color: rgba(67, 67, 67, 0.99);
+}
+body.dark .autocomplete-items div:hover {
+  background-color: rgba(119, 140, 163, 0.99);
+}
+body.dark .autocomplete-active {
+  background-color: rgba(119, 140, 163, 0.99); 
+  color: #fcfaf2; 
+}
+
+body.white .autocomplete-items {
+  background-color: rgba(67, 67, 67, 0.99);
+}
+body.white .autocomplete-items div:hover {
+  background-color: rgba(119, 140, 163, 0.99);
+}
+body.white .autocomplete-active {
+  background-color: rgba(119, 140, 163, 0.99); 
+  color: #fcfaf2; 
 }
 
 /* Grid */
