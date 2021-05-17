@@ -116,6 +116,53 @@ function pickSong(Index) {
   playSong();
 }
 
+// ================= Random songs ====================
+
+
+function randomSongs() {
+  let corlo = document.getElementById("random");
+  let r = Math.floor(Math.random() * songs.length);
+  loadSong(songs[r]);
+  loadArtist(artists[r]);
+  songIndex = r;
+  artistIndex = r;
+  playSong();
+}
+
+let randomBtn = document.getElementById("random");
+randomBtn.addEventListener("click", ()=>{
+  const isPlaying = musicContainer.classList.contains("play");
+  if(isPlaying){
+    randomSongs();
+  }
+})
+
+// ================= Loop Songs ======================
+
+function unLoop() {
+  let replay = document.getElementById("audio");
+  let corl = document.getElementById("loop");
+  corl.style.color = "white";
+  replay.loop = false;
+}
+
+function loopSongs() {
+  let replay = document.getElementById("audio");
+  let corl = document.getElementById("loop");
+  replay.loop = true;
+  corl.style.color = "#ff6b81";
+}
+
+let loopBtn = document.getElementById("loop");
+loopBtn.addEventListener("click", () => {
+  let replay = document.getElementById("audio").loop;
+  if (replay) {
+    unLoop();
+  } else {
+    loopSongs();
+  }
+})
+
 // Progress bar
 function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
@@ -236,71 +283,71 @@ function autocomplete(inp, arr) {
   the text field element and an array of possible autocompleted values:*/
   let currentFocus;
   /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function(e) {
-      let a, b, i, val = this.value;
-      /*close any already open lists of autocompleted values*/
-      closeAllLists();
-      if (!val) { return false;}
-      currentFocus = -1;
-      /*create a DIV element that will contain the items (values):*/
-      a = document.createElement("DIV");
-      a.setAttribute("id", this.id + "autocomplete-list");
-      a.setAttribute("class", "autocomplete-items");
-      /*append the DIV element as a child of the autocomplete container:*/
-      this.parentNode.appendChild(a);
-      /*for each item in the array...*/
-      for (i = 0; i < arr.length; i++) {
-        /*check if the item starts with the same letters as the text field value:*/
-        if (arr[i].includes(val)) {
-          /*create a DIV element for each matching element:*/
-          b = document.createElement("DIV");
-          b.className = "item";
-          /*make the matching letters bold:*/
-          b.innerHTML = arr[i].substr(0, val.length);
-          b.innerHTML += arr[i].substr(val.length);
-          /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          /*execute a function when someone clicks on the item value (DIV element):*/
-          b.addEventListener("click", function(e) {
-              /*insert the value for the autocomplete text field:*/
-              inp.value = this.getElementsByTagName("input")[0].value;
-              for(let i=0; i<songs.length; i++){
-                if(inp.value === songs[i]){
-                  pickSong(i);
-                }
-              }
-              /*close the list of autocompleted values,
-              (or any other open lists of autocompleted values:*/
-              closeAllLists();
-          });
-          a.appendChild(b);
-        }
+  inp.addEventListener("input", function (e) {
+    let a, b, i, val = this.value;
+    /*close any already open lists of autocompleted values*/
+    closeAllLists();
+    if (!val) { return false; }
+    currentFocus = -1;
+    /*create a DIV element that will contain the items (values):*/
+    a = document.createElement("DIV");
+    a.setAttribute("id", this.id + "autocomplete-list");
+    a.setAttribute("class", "autocomplete-items");
+    /*append the DIV element as a child of the autocomplete container:*/
+    this.parentNode.appendChild(a);
+    /*for each item in the array...*/
+    for (i = 0; i < arr.length; i++) {
+      /*check if the item starts with the same letters as the text field value:*/
+      if (arr[i].includes(val)) {
+        /*create a DIV element for each matching element:*/
+        b = document.createElement("DIV");
+        b.className = "item";
+        /*make the matching letters bold:*/
+        b.innerHTML = arr[i].substr(0, val.length);
+        b.innerHTML += arr[i].substr(val.length);
+        /*insert a input field that will hold the current array item's value:*/
+        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+        /*execute a function when someone clicks on the item value (DIV element):*/
+        b.addEventListener("click", function (e) {
+          /*insert the value for the autocomplete text field:*/
+          inp.value = this.getElementsByTagName("input")[0].value;
+          for (let i = 0; i < songs.length; i++) {
+            if (inp.value === songs[i]) {
+              pickSong(i);
+            }
+          }
+          /*close the list of autocompleted values,
+          (or any other open lists of autocompleted values:*/
+          closeAllLists();
+        });
+        a.appendChild(b);
       }
+    }
   });
   /*execute a function presses a key on the keyboard:*/
-  inp.addEventListener("keydown", function(e) {
-      let x = document.getElementById(this.id + "autocomplete-list");
-      if (x) x = x.getElementsByTagName("div");
-      if (e.keyCode == 40) {
-        /*If the arrow DOWN key is pressed,
-        increase the currentFocus variable:*/
-        currentFocus++;
-        /*and and make the current item more visible:*/
-        addActive(x);
-      } else if (e.keyCode == 38) { //up
-        /*If the arrow UP key is pressed,
-        decrease the currentFocus variable:*/
-        currentFocus--;
-        /*and and make the current item more visible:*/
-        addActive(x);
-      } else if (e.keyCode == 13) {
-        /*If the ENTER key is pressed, prevent the form from being submitted,*/
-        e.preventDefault();
-        if (currentFocus > -1) {
-          /*and simulate a click on the "active" item:*/
-          if (x) x[currentFocus].click();
-        }
+  inp.addEventListener("keydown", function (e) {
+    let x = document.getElementById(this.id + "autocomplete-list");
+    if (x) x = x.getElementsByTagName("div");
+    if (e.keyCode == 40) {
+      /*If the arrow DOWN key is pressed,
+      increase the currentFocus variable:*/
+      currentFocus++;
+      /*and and make the current item more visible:*/
+      addActive(x);
+    } else if (e.keyCode == 38) { //up
+      /*If the arrow UP key is pressed,
+      decrease the currentFocus variable:*/
+      currentFocus--;
+      /*and and make the current item more visible:*/
+      addActive(x);
+    } else if (e.keyCode == 13) {
+      /*If the ENTER key is pressed, prevent the form from being submitted,*/
+      e.preventDefault();
+      if (currentFocus > -1) {
+        /*and simulate a click on the "active" item:*/
+        if (x) x[currentFocus].click();
       }
+    }
   });
   function addActive(x) {
     /*a function to classify an item as "active":*/
@@ -330,7 +377,7 @@ function autocomplete(inp, arr) {
   }
   /*execute a function when someone clicks in the document:*/
   document.addEventListener("click", function (e) {
-      closeAllLists(e.target);
+    closeAllLists(e.target);
   });
 }
 
