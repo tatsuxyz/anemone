@@ -220,14 +220,18 @@ nav {
   transform: scale(1.001);
 }
 
-.show-player i,
-.hide-player i {
+.show-player,
+.hide-player {
   cursor: pointer;
   vertical-align: middle;
   padding: 20px;
 }
 .hide-player {
   display: none;
+}
+.hide-player i,
+.hide-player span {
+  margin: 20px 4px;
 }
 
 .track-meta {
@@ -278,12 +282,9 @@ nav {
   padding: 20px 5px;
 }
 
-.playback-opt i {
-  margin: 0 15px;
-}
-
-.playback-opt i.fa-random {
-  font-size: 18px;
+.playback-opt button i {
+  font-size: 16px;
+  /* margin: 0 15px; */
 }
 
 .control-playback i {
@@ -472,7 +473,8 @@ nav {
   button#prev,
   button#next,
   .progress-container,
-  .control-volume {
+  .control-volume,
+  .playback-opt {
     display: none;
   }
   button#play {

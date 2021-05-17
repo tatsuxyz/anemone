@@ -172,6 +172,11 @@
       </div>
 
       <div class="control-playback">
+        <div class="playback-opt">
+          <button id="random" class="action-btn">
+            <i class="fas fa-random"></i>
+          </button>
+        </div>
         <button id="prev" class="action-btn">
           <i class="fas fa-backward"></i>
         </button>
@@ -181,12 +186,11 @@
         <button id="next" class="action-btn">
           <i class="fas fa-forward"></i>
         </button>
-        <button id="random" class="action-btn">
-          <i class="fas fa-random"></i>
-        </button>
-        <button id="loop" class="action-btn">
-          <i class="fas fa-retweet"></i>
-        </button>
+        <div class="playback-opt">
+          <button id="loop" class="action-btn">
+            <i class="fas fa-retweet"></i>
+          </button>
+        </div>
       </div>
 
       <div class="progress-container">
@@ -209,7 +213,7 @@
       </div>
 
       <div class="hide-player" onclick="removePlayer()">
-        <i class="fas fa-caret-down"></i>
+        <i class="fas fa-caret-down"></i> <span>Ẩn trình phát</span>
       </div>
     </div>
     <!-- end music player -->

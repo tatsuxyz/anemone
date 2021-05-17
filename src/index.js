@@ -388,11 +388,13 @@ let musicPlayer = document.querySelector("#musicPlayer");
 let showPlayer = document.querySelector(".show-player");
 let hidePlayer = document.querySelector(".hide-player");
 let volControl = document.querySelector(".control-volume");
+let randOpt = document.querySelector("#random");
+let loopOpt = document.querySelector("#loop");
 let metaInfo = document.querySelector(".meta-info");
 
 function appendPlayer() {
-  musicPlayer.style.height = "37%";
-  musicPlayer.style.top = "60%";
+  musicPlayer.style.height = "45%";
+  musicPlayer.style.top = "50%";
   musicPlayer.style.padding = "15px 10px";
   musicPlayer.style.display = "block";
 
@@ -401,7 +403,6 @@ function appendPlayer() {
     artistTitle.style.width = "200px";
     showPlayer.style.display = "none";
     hidePlayer.style.display = "inline";
-    hidePlayer.style.padding = "0px 0px 0px 50px";
     progressContainer.style.display = "block";
     progressContainer.style.width = "90%";
     progress.style.display = "block";
@@ -410,6 +411,8 @@ function appendPlayer() {
     volControl.style.right = "10%";
     prevBtn.style.display = "inline";
     nextBtn.style.display = "inline";
+    randOpt.style.display = "inline";
+    loopOpt.style.display = "inline";
   }, 200);
 }
 
@@ -418,7 +421,6 @@ function removePlayer() {
   artistTitle.style.width = "100%";
   hidePlayer.style.display = "none";
   showPlayer.style.display = "inline";
-  hidePlayer.style.padding = "0px 0px 0px 0px";
   progressContainer.style.display = "none";
   progressContainer.style.width = "100%";
   progress.style.display = "none";
@@ -427,6 +429,8 @@ function removePlayer() {
   volControl.style.right = "0";
   prevBtn.style.display = "none";
   nextBtn.style.display = "none";
+  randOpt.style.display = "none";
+  loopOpt.style.display = "none";
 
   setTimeout(() => {
     musicPlayer.style.height = "60px";
