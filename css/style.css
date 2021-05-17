@@ -413,16 +413,13 @@ nav {
     display: none;
   }
   .autocomplete {
-    width: 32px;
-    border-radius: 50%;
+    width: 100%;
+    border-radius: 16px;
     overflow: hidden;
     padding: 8px 10px;
   }
-  .autocomplete input {
-    display: none;
-  }
   .autocomplete i {
-    padding: 0 0;
+    padding: 5px 10px;
   }
 
   /* body */
