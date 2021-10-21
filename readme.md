@@ -1,5 +1,9 @@
 # anemone
 
+```
+THIS REPOSITORY IS NO LONGER MAINTAIN
+```
+
 anemone là một trang web nghe nhạc cơ bản, chúng mình tạo ra để đăng tải nhạc theo sở thích. Với mục tiêu tạo ra trải nghiệm sử dụng, tạo ra trải nghiệm nghe.
 Dù với những thiết kế đơn giản nhất nhưng tạo ra cho bạn trải nghiệm sử dụng cơ bản nhất định mà chúng mình cho là tốt.
 
