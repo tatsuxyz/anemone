@@ -9,7 +9,7 @@ Dù với những thiết kế đơn giản nhất nhưng tạo ra cho bạn tr�
 
 ## Thiết đặt (Installation)
 
-Không cần thiết đặt gì thêm, bạn có thể trải nghiệm trang web [tại đây](http://anemone-music.web.app/) !
+Không cần thiết đặt gì thêm, bạn có thể trải nghiệm trang web [tại đây](https://tatsuk1i.github.io/anemone/) !
 
 ## Cách sử dụng (Usage)
 
